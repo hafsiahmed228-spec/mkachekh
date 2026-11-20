@@ -1,7 +1,7 @@
 <p align="center"><img src="icon.png" width="140" alt="Mkachekh"></p>
 
 <h1 align="center">MKACHEKH</h1>
-<p align="center"><b>v1.25 · استوديو الفيديو بالذكاء الاصطناعي على تليفونك</b></p>
+<p align="center"><b>v1.26 · استوديو الفيديو بالذكاء الاصطناعي على تليفونك</b></p>
 
 <p align="center">
   <a href="https://github.com/hafsiahmed228-spec/mkachekh/raw/main/Mkachekh.apk"><b>⬇️ تحميل التطبيق (APK)</b></a>
