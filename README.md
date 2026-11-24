@@ -1,13 +1,14 @@
 <p align="center"><img src="icon.png" width="140" alt="Mkachekh"></p>
 
 <h1 align="center">MKACHEKH</h1>
-<p align="center"><b>v1.30 · استوديو الفيديو بالذكاء الاصطناعي على تليفونك</b></p>
+<p align="center"><b>v1.31 · استوديو الفيديو الذكي بالذكاء الاصطناعي على تليفونك</b></p>
 
 <p align="center">
   <a href="https://github.com/hafsiahmed228-spec/mkachekh/raw/main/Mkachekh.apk"><b>⬇️ تحميل التطبيق (APK)</b></a>
 </p>
 
 ## شنوّة يعمل؟
+- 🧠 موّجه ذكاء تلقائي: يخدم مباشرة حتّى بلا مفتاح، ويدمج مفاتيحك المجانية (Groq، Cerebras، Google Gemini، Mistral، GitHub Models، Cloudflare، Hugging Face، Pexels، Pixabay) مع توثيق حيّ من ويكيبيديا والتفسير الميسّر.
 - 🎭 دراما قصيرة: مسلسل بالحلقات، كل شخصية بصوتها ونفس وجهها.
 - 📚 مكتبة برومبتات محترفة (فيديو، صور، هوكات).
 - 🎓 شرح: انت تحكي لوطة ولوحة متحرّكة فوقك تشرح كلامك (كيف ريلز الشروحات).
