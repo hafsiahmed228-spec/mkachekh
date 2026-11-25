@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mkachekh AI — استوديو الفيديو ثلاثي الأبعاد بالذكاء الاصطناعي</title>
+  <meta name="description" content="أقوى استوديو ذكاء اصطناعي على تليفونك لصناعة الفيديوهات، الدراما، الإعلانات التجارية، البودكاست، الكورة، القرآن والمونتاج بالدارجة التونسية والعربية." />
+  <link rel="icon" href="icon.png" />
+  <style>
+    :root {
+      --bg: #050814;
+      --card: rgba(15, 23, 42, 0.78);
+      --border: rgba(56, 189, 248, 0.22);
+      --accent: #38bdf8;
+      --gold: #fbbf24;
+      --pink: #ec4899;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif;
+      background: radial-gradient(circle at 50% 0%, #161b3d 0%, var(--bg) 55%, #03050c 100%);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; font-size: 1.35rem; letter-spacing: 0.5px; }
+    .brand img { width: 44px; height: 44px; border-radius: 13px; box-shadow: 0 0 24px rgba(56,189,248,0.4); }
+    .ver-pill {
+      background: rgba(56,189,248,0.14); border: 1px solid var(--border);
+      color: var(--accent); padding: 5px 14px; border-radius: 999px; font-size: 0.85rem; font-weight: 700;
+    }
+    .hero {
+      text-align: center; padding: 64px 0 48px; position: relative; perspective: 900px;
+    }
+    .orb-stage {
+      width: 156px; height: 156px; margin: 0 auto 26px; position: relative;
+      transform-style: preserve-3d; animation: floatOrb 5s ease-in-out infinite;
+    }
+    .orb-core {
+      width: 100%; height: 100%; border-radius: 36px;
+      background: linear-gradient(135deg, rgba(56,189,248,0.28), rgba(236,72,153,0.28));
+      border: 2px solid rgba(255,255,255,0.22);
+      display: grid; place-items: center;
+      box-shadow: 0 22px 60px rgba(56,189,248,0.35), inset 0 0 32px rgba(251,191,36,0.22);
+      backdrop-filter: blur(12px);
+    }
+    .orb-core img { width: 96px; height: 96px; border-radius: 22px; }
+    @keyframes floatOrb {
+      0%, 100% { transform: translateY(0) rotateX(6deg) rotateY(-8deg); }
+      50% { transform: translateY(-12px) rotateX(-6deg) rotateY(8deg); }
+    }
+    h1 {
+      font-size: clamp(2.1rem, 6vw, 3.6rem); font-weight: 900; margin-bottom: 14px;
+      background: linear-gradient(90deg, #fff, #38bdf8, #fbbf24);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .lead { max-width: 680px; margin: 0 auto 30px; color: var(--muted); font-size: 1.12rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 18px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 28px; border-radius: 18px; font-weight: 800; font-size: 1.05rem;
+      text-decoration: none; transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-dl {
+      background: linear-gradient(135deg, #38bdf8, #8b5cf6, #ec4899); color: #fff;
+      box-shadow: 0 14px 36px rgba(139, 92, 246, 0.42);
+    }
+    .btn-wa {
+      background: rgba(34, 197, 94, 0.16); color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.45);
+    }
+    .subnote { font-size: 0.88rem; color: var(--muted); }
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+      gap: 18px; padding: 36px 0 56px;
+    }
+    .tile {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 24px; padding: 22px;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.35);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .tile:hover { transform: translateY(-5px); border-color: var(--gold); }
+    .tile-ico { font-size: 2rem; margin-bottom: 10px; display: block; }
+    .tile h3 { font-size: 1.12rem; margin-bottom: 6px; color: #fff; }
+    .tile p { font-size: 0.93rem; color: var(--muted); }
+    .pro-banner {
+      background: linear-gradient(135deg, rgba(251,191,36,0.14), rgba(236,72,153,0.12));
+      border: 1px solid rgba(251,191,36,0.4);
+      border-radius: 28px; padding: 34px 26px; text-align: center; margin-bottom: 56px;
+    }
+    .pro-banner h2 { color: var(--gold); font-size: 1.65rem; margin-bottom: 10px; }
+    .pro-banner p { color: #e2e8f0; max-width: 620px; margin: 0 auto 22px; }
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 0 42px; text-align: center; color: var(--muted); font-size: 0.92rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; margin: 0 8px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img src="icon.png" alt="Mkachekh" />
+        <span>MKACHEKH STUDIO 3D</span>
+      </div>
+      <span class="ver-pill" id="ver">v1.35 · Android</span>
+    </header>
+
+    <section class="hero">
+      <div class="orb-stage">
+        <div class="orb-core"><img src="icon.png" alt="Mkachekh AI" /></div>
+      </div>
+      <h1>استوديو الفيديو الذكي في جيبك</h1>
+      <p class="lead">
+        أوّل استوديو أندرويد متكامل بالدارجة التونسية والعربية يصنع قصص الفيديو، المسلسلات، إعلانات التجارة، الخرائط الوثائقية، البودكاست، مقارنات الكورة، وفيديوهات القرآن والمونتاج بضغطة وحدة!
+      </p>
+      <div class="cta-row">
+        <a id="dl-btn" class="btn btn-dl" href="https://github.com/hafsiahmed228-spec/mkachekh/raw/main/Mkachekh.apk">
+          ⬇️ تحميل التطبيق مجانًا (APK)
+        </a>
+        <a class="btn btn-wa" href="https://wa.me/21698151297?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D9%86%D8%AD%D8%A8%20%D9%86%D9%81%D8%B9%D9%91%D9%84%20Mkachekh%20Pro" target="_blank" rel="noreferrer">
+          💬 تفعيل Mkachekh Pro عبر واتساب
+        </a>
+      </div>
+      <p class="subnote">يعمل على جميع هواتف Android · يدمج أكثر من 10 مصادر ذكاء اصطناعي مجانية · تصدير حتى 1080p Full HD</p>
+    </section>
+
+    <section class="grid" aria-label="مميزات التطبيق">
+      <article class="tile">
+        <span class="tile-ico">🎬</span>
+        <h3>قصص ودراما بالحلقات</h3>
+        <p>كتابة القصة، رسم الشخصيات بنفس الملامح، تعليق صوتي تونسي وعربي، وترجمة كاراوكي احترافية.</p>
+      </article>
+      <article class="tile">
+        <span class="tile-ico">🛒</span>
+        <h3>استوديو إعلانات التجارة</h3>
+        <p>حط تصاور المنتوج والسوم بالدينار ونمرة الواتساب، ويخرج إعلان بيع 3D جاهز للـ Sponsoring في ثواني.</p>
+      </article>
+      <article class="tile">
+        <span class="tile-ico">🗺️</span>
+        <h3>الخرائط المتحرّكة والوثائقيات</h3>
+        <p>طيران كاميرا سينمائي فوق الخريطة من مدينة لمدينة بأسهم مضيئة وتعليق وثائقي عميق.</p>
+      </article>
+      <article class="tile">
+        <span class="tile-ico">⚽</span>
+        <h3>استوديو الكورة والمقارنات VS</h3>
+        <p>نتائج ومباريات مباشرة من رابطة الأبطال والدوريات الكبرى مع شعارات الفرق الحقيقية وتعليق حماسي.</p>
+      </article>
+      <article class="tile">
+        <span class="tile-ico">🎙️</span>
+        <h3>بودكاست، محادثات، وخبر عاجل</h3>
+        <p>حلقات بودكاست بموجات صوتية حيّة، محادثات واتساب وإنستغرام متحرّكة، ونشرات أخبار عاجلة مع شاشة مقسومة.</p>
+      </article>
+      <article class="tile">
+        <span class="tile-ico">🏆</span>
+        <h3>توب 5 + مصمّم الكاروسيل</h3>
+        <p>فيديوهات عدّ تنازلي مشوّقة من #5 إلى #1، وتصميم شرائح كاروسيل 1080p جاهزة لتيك توك وإنستغرام.</p>
+      </article>
+      <article class="tile">
+        <span class="tile-ico">📖</span>
+        <h3>القرآن الكريم والحديث والأذكار</h3>
+        <p>تلاوات خاشعة بنصّ عثماني دقيق، بطاقة بسملة ذهبية، تفسير ميسّر، وخلفيات طبيعة هادئة بلا موسيقى.</p>
+      </article>
+      <article class="tile">
+        <span class="tile-ico">✂️</span>
+        <h3>ستوديو المونتاج وتنقية الصوت</h3>
+        <p>حذف الصمت، تدقيق الكلام التونسي قبل حرقو على الفيديو، عزل ضجيج الشارع، وتغيير طبقات الصوت.</p>
+      </article>
+    </section>
+
+    <section class="pro-banner">
+      <h2>⭐ جرّب Mkachekh Pro مجانًا 24 ساعة!</h2>
+      <p>افتح صناعة الفيديوهات الطويلة (حتّى 10 دقائق)، الدفعات الأوتوماتيكية، الدبلجة لعدّة لغات، ستوديو الغلاف (Thumbnail)، وإزالة العلامة المائية.</p>
+      <a class="btn btn-wa" href="https://wa.me/21698151297?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D9%86%D8%AD%D8%A8%20%D9%86%D8%B4%D8%B1%D9%8A%20%D9%83%D9%88%D8%AF%20Mkachekh%20Pro" target="_blank" rel="noreferrer">
+        📲 اطلب كود التفعيل الدائم على واتساب (+216 98 151 297)
+      </a>
+    </section>
+
+    <footer>
+      <p>صُنع بكلّ فخر في تونس 🇹🇳 · <b>Mkachekh AI Studio</b></p>
+      <p style="margin-top:8px">
+        <a href="https://instagram.com/ahmed.hafsii" target="_blank" rel="noreferrer">Instagram</a> ·
+        <a href="https://www.facebook.com/ahmedhfsi" target="_blank" rel="noreferrer">Facebook</a> ·
+        <a href="https://wa.me/21698151297" target="_blank" rel="noreferrer">WhatsApp</a>
+      </p>
+    </footer>
+  </div>
+  <script>
+    fetch('version.json?t=' + Date.now())
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d) return;
+        if (d.version) document.getElementById('ver').textContent = d.version + ' · Android';
+        if (d.url) document.getElementById('dl-btn').href = d.url;
+      })
+      .catch(function () {});
+  </script>
+</body>
+</html>
